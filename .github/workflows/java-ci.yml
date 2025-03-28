@@ -16,7 +16,7 @@ jobs:
     - name: Check out the repository
       uses: actions/checkout@v2  # Faz o checkout do repositório
 
-    - name: Set up JDK 17
+    - name: Set JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'  # Versão do JDK 
