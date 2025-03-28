@@ -1,0 +1,36 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main  # Ou a branch principal do seu projeto
+  pull_request:
+    branches:
+      - main  # Ou a branch principal do seu projeto
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Definindo que o workflow vai rodar em um container Ubuntu
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2  # Faz o checkout do repositório
+
+    - name: Set up JDK 22
+      uses: actions/setup-java@v3
+      with:
+        java-version: '22'  # Defina a versão do JDK que você está utilizando
+
+    - name: Cache Maven dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository  # Cache das dependências Maven para otimizar o tempo de build
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    - name: Build with Maven
+      run: mvn clean install  # Comando Maven para build e execução de testes
+
+    - name: Run tests
+      run: mvn test  # Executa os testes
