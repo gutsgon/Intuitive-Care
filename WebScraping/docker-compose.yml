@@ -1,0 +1,13 @@
+
+services:
+  webscraping:
+    build:
+      context: .  # O diretório onde está o Dockerfile
+      dockerfile: Dockerfile  # Nome do arquivo Dockerfile
+    volumes:
+      - ./target:/app/target  # Mapeia o diretório "target" do host para dentro do contêiner em "/app"
+      - ./src/test/java/com/intuitive/care/webscraping/downloads:/app/src/test/java/com/intuitive/care/webscraping/downloads
+
+    ports:
+      - "8080:8080"  # Expondo a porta 8080
+    command: ["java", "-jar", "/app/target/webscraping-1.0.jar"]  # Comando para rodar o JAR
