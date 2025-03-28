@@ -31,8 +31,8 @@ Recomendação de ferramenta de desenvolvimento:
 ### 1️⃣ Clonar o repositório
 
 ```sh
-git clone https://github.com/gutsgon/intuitive-care.git
-cd intuitive-care
+git clone https://github.com/gutsgonIintuitive-Care.git
+cd Intuitive-Care
 ```
 
 ### 2️⃣ Empacotando a aplicação
