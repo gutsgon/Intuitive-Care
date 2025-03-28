@@ -1,37 +1,119 @@
-# Intuitive-Care
+# Web Scraper ANS
 
-Bem-vindo ao repositório **Intuitive-Care**! Este projeto foi desenvolvido como parte de um teste técnico e está organizado em diferentes branches para separar cada parte da implementação.
+Este projeto realiza web scraping no site da **ANS** para baixar e compactar PDFs automaticamente.
 
-## 📂 Estrutura do Repositório
-O repositório está dividido nas seguintes branches:
+## 📌 Funcionalidades
 
-### 🔹 [API](https://github.com/gutsgon/Intuitive-Care/tree/api)
-Esta branch contém o código responsável por expor os dados via uma API. Tecnologias utilizadas:
-- Framework: Vue.js + Python
-- Funcionalidade: Busca e exposição de dados via rota web
+- Acessa o site da ANS e encontra os links para os PDFs.
+- Faz o download dos arquivos automaticamente.
+- Compacta todos os PDFs em um único arquivo ZIP.
 
-### 🔹 [Database](https://github.com/gutsgon/Intuitive-Care/tree/database)
-Esta branch contém a modelagem e estruturação do banco de dados, incluindo:
-- Banco de dados: PostgreSQL >10
-- Estruturas de tabelas e queries analíticas
-- Importação de dados
+## 🛠 Tecnologias Utilizadas
 
-### 🔹 [Web Scraping](https://github.com/gutsgon/Intuitive-Care/tree/webscraping)
-Nesta branch está a implementação do Web Scraping para baixar e compactar PDFs do site da ANS. Tecnologias utilizadas:
-- Linguagem: Java
-- Bibliotecas para scraping e manipulação de arquivos
+- **[Java 17+](https://jdk.java.net/)** (linguagem principal)
+- **[Maven 3+](https://maven.apache.org/download.cgi)** (gerenciamento de dependências)
+- **[Docker](https://www.docker.com/)** (opcional, para containerizar a aplicação)
 
-### 🔹 [Data Transformation](https://github.com/gutsgon/Intuitive-Care/tree/data-transformation)
-Esta branch contém o código responsável pela extração de informações dos PDFs e transformação dos dados em CSV. Tecnologias utilizadas:
-- Linguagem: Python
-- Manipulação de arquivos e estruturação de dados
+## 📋 Pré-requisitos
+
+Antes de começar, verifique se você tem instalado:
+
+- [Java 17+](https://jdk.java.net/)
+- [Maven 3+](https://maven.apache.org/download.cgi)
+- [Docker](https://www.docker.com/) (caso queira rodar via container)
+
+Recomendação de ferramenta de desenvolvimento:
+
+- **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** (IDE recomendada para desenvolvimento em Java com suporte nativo para Maven).
+
+## 🚀 Como Executar
+
+### 1️⃣ Clonar o repositório
+
+```sh
+git clone https://github.com/gutsgon/web-scraper-ans.git
+cd web-scraper-ans
+```
+
+### 2️⃣ Empacotando a aplicação
+
+```sh
+mvn clean package
+```
+
+### 3️⃣ Executar o projeto
+
+```sh
+java -jar target/webscraping-1.0.jar
+```
+
+### 4️⃣ Executar via Docker (opcional)
+
+```sh
+docker-compose up --build
+```
+
+## 🏗 Estrutura do Projeto
+
+```
+📦 Web Scraper ANS
+ ┣ 📂 src
+ ┃ ┣ 📂 main
+ ┃ ┃ ┣ 📂 java
+ ┃ ┃ ┃ ┣ 📂 com.intuitive.care.webscraping
+ ┃ ┃ ┃ ┃ ┣ 📜 Main.java  # Classe principal que executa todas as funcionalidades
+ ┃ ┃ ┃ ┃ ┣ 📂 compressor
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 Compressor.java
+ ┃ ┃ ┃ ┃ ┣ 📂 downloader
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 FileDownloader.java
+ ┃ ┃ ┃ ┃ ┣ 📂 exception
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 CompressException.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 DownloadException.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 ScraperException.java
+ ┃ ┃ ┃ ┃ ┣ 📂 scraper
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜 WebScraper.java
+ ┃ ┣ 📂 test
+ ┃ ┃ ┣ 📂 java
+ ┃ ┃ ┃ ┣ 📂 com.intuitive.care.webscraping
+ ┃ ┃ ┃ ┃ ┣ 📜 ApplicationTest.java  # Testes unitários principais
+ ┃ ┃ ┃ ┃ ┣ 📂 downloads # Arquivos baixados nos testes
+ ┣ 📜 pom.xml
+ ┣ 📜 Dockerfile
+ ┣ 📜 docker-compose.yml
+ ┣ 📜 README.md
+```
+
+## 🌿 Estrutura de Branches
+
+Este repositório conterá diferentes projetos, organizados por branches:
+
+- `main` → Web Scraper ANS
+- `projeto-2` → (Futuro projeto 2)
+- `projeto-3` → (Futuro projeto 3)
+
+Para alternar entre os projetos:
+
+```sh
+git checkout projeto-2
+```
+
+## 🔍 Testes Unitários
+
+Os testes são fundamentais para garantir a integridade do código. O principal arquivo de testes é:
+
+- **`ApplicationTest.java`** → Contém os testes unitários principais para validar o comportamento da aplicação.
+
+Para rodar os testes, utilize:
+
+```sh
+mvn test
+```
 
 ## 📜 Licença
-Este projeto é licenciado sob a [MIT License](./LICENSE).
 
-## 🚀 Como Acessar o Código
-Cada parte do projeto pode ser acessada através dos links acima. Basta navegar até a branch desejada para visualizar o código correspondente.
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-Caso tenha dúvidas ou precise de mais informações, sinta-se à vontade para entrar em contato!
+
+Caso tenha dúvidas ou sugestões, fique à vontade para contribuir! 🚀
 
