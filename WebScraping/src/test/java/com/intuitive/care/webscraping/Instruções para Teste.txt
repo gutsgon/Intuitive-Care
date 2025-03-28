@@ -1,0 +1,10 @@
+Os testes automatizados e a classe Main.java irão deixar os arquivos 
+baixados no diretório: 
+
+src/test/java/com/intuitive/care/webscraping/downloads
+Obs: Esse diretório será criado automaticamente pelo código.
+
+Para o teste de stress na classe Application.java funcionar corretamente:
+
+Ir a classe FileDownloader.java
+Comentar linhas 80 a 83
