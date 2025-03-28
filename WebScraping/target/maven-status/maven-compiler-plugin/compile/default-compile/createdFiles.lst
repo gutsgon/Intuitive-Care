@@ -1,0 +1,7 @@
+com\intuitive\care\webscraping\exception\CompressException.class
+com\intuitive\care\webscraping\downloader\FileDownloader.class
+com\intuitive\care\webscraping\exception\DownloadException.class
+com\intuitive\care\webscraping\scraper\WebScraper.class
+com\intuitive\care\webscraping\exception\ScraperException.class
+com\intuitive\care\webscraping\Main.class
+com\intuitive\care\webscraping\compressor\Compressor.class
