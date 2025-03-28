@@ -31,8 +31,8 @@ Recomendação de ferramenta de desenvolvimento:
 ### 1️⃣ Clonar o repositório
 
 ```sh
-git clone https://github.com/gutsgon/web-scraper-ans.git
-cd web-scraper-ans
+git clone https://github.com/gutsgonIintuitive-Care.git
+cd Intuitive-Care
 ```
 
 ### 2️⃣ Empacotando a aplicação
@@ -87,14 +87,16 @@ docker-compose up --build
 
 Este repositório conterá diferentes projetos, organizados por branches:
 
-- `main` → Web Scraper ANS
-- `projeto-2` → (Futuro projeto 2)
-- `projeto-3` → (Futuro projeto 3)
+- `webscraping` → Web Scraper ANS
+- `api` → API
+- `database` → Database Query
+- `data-transformation` → Data Transformation
+- `documentation` → Documentation
 
 Para alternar entre os projetos:
 
 ```sh
-git checkout projeto-2
+git checkout data-transformation
 ```
 
 ## 🔍 Testes Unitários
