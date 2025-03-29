@@ -6,3 +6,4 @@ csv		# Manipulção de CSV
 zipfile		# Compactar arquivos
 os 		# Manipular diretórios do sistema
 re		# Manipulação de Strings
+psutil		# Para testes de performance
