@@ -1,0 +1,12 @@
+
+services:
+  app:
+    build:
+      context: .  # Caminho para o diretório com o Dockerfile
+      dockerfile: Dockerfile          # Nome do Dockerfile (caso não seja o padrão "Dockerfile")
+    ports:
+      - "8080:8080"  # Exemplo de mapeamento de porta (se necessário)
+    volumes:
+      - .:/app        # Mapeamento de volumes, se necessário
+    environment:
+      - ENV_VAR=value # Variáveis de ambiente, se necessário
