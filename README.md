@@ -1,37 +1,113 @@
-# Intuitive-Care
 
-Bem-vindo ao repositório **Intuitive-Care**! Este projeto foi desenvolvido como parte de um teste técnico e está organizado em diferentes branches para separar cada parte da implementação.
+# Data Transformation
 
-## 📂 Estrutura do Repositório
-O repositório está dividido nas seguintes branches:
+Este projeto realiza a transformação de dados extraídos de arquivos PDF para o formato CSV, permitindo a análise e a organização dos dados de maneira estruturada.
 
-### 🔹 [API](https://github.com/gutsgon/Intuitive-Care/tree/api)
-Esta branch contém o código responsável por expor os dados via uma API. Tecnologias utilizadas:
-- Framework: Vue.js + Python
-- Funcionalidade: Busca e exposição de dados via rota web
+## 📌 Funcionalidades
 
-### 🔹 [Database](https://github.com/gutsgon/Intuitive-Care/tree/database)
-Esta branch contém a modelagem e estruturação do banco de dados, incluindo:
-- Banco de dados: PostgreSQL >10
-- Estruturas de tabelas e queries analíticas
-- Importação de dados
+- Extrai dados de PDFs baixados e processados.
+- Converte os dados extraídos em um formato CSV.
+- Organiza os dados para fácil análise e consulta.
 
-### 🔹 [Web Scraping](https://github.com/gutsgon/Intuitive-Care/tree/webscraping)
-Nesta branch está a implementação do Web Scraping para baixar e compactar PDFs do site da ANS. Tecnologias utilizadas:
-- Linguagem: Java
-- Bibliotecas para scraping e manipulação de arquivos
+## 🛠 Tecnologias Utilizadas
 
-### 🔹 [Data Transformation](https://github.com/gutsgon/Intuitive-Care/tree/data-transformation)
-Esta branch contém o código responsável pela extração de informações dos PDFs e transformação dos dados em CSV. Tecnologias utilizadas:
-- Linguagem: Python
-- Manipulação de arquivos e estruturação de dados
+- **[Python 3.x](https://www.python.org/)** (linguagem principal)
+- **[PyCharm](https://www.jetbrains.com/pycharm/)** (IDE recomendada para desenvolvimento em Python)
+- **[Docker](https://www.docker.com/)** (opcional, para containerizar a aplicação)
+- **[Pandas](https://pandas.pydata.org/)** (para manipulação de dados)
+- **[PyPDF2](https://pythonhosted.org/PyPDF2/)** (para extração de texto de PDFs)
+- **[pytest](https://pytest.org/)** (para testes automatizados)
+
+## 📋 Pré-requisitos
+
+Antes de começar, verifique se você tem instalado:
+
+- [Python 3.x](https://www.python.org/)
+- **pip** (gerenciador de pacotes do Python)
+
+Recomendação de ferramenta de desenvolvimento:
+
+- **[PyCharm](https://www.jetbrains.com/pycharm/)** (IDE recomendada para desenvolvimento em Python).
+
+## 🚀 Como Executar
+
+### 1️⃣ Clonar o repositório
+
+```sh
+git clone https://github.com/gutsgon/Intuitive-Care.git
+cd Intuitive-Care
+```
+
+### 2️⃣ Instalar as dependências
+
+```sh
+pip install -r requirements.txt
+```
+
+### 3️⃣ Executar o projeto
+
+```sh
+python src/main.py
+```
+
+### 4️⃣ Executar via Docker (opcional)
+
+```sh
+docker-compose up --build
+```
+
+## 🏗 Estrutura do Projeto (MVC)
+
+```
+📦 Data Transformation
+ ┣ 📂 src
+ ┃ ┣ 📂 controllers
+ ┃ ┃ ┣ 📜 transformation_controller.py  # Coordena o fluxo de transformação
+ ┃ ┣ 📂 models
+ ┃ ┃ ┣ 📜 pdf_data.py                  # Representa os dados extraídos do PDF
+ ┃ ┣ 📂 services
+ ┃ ┃ ┣ 📜 pdf_service.py               # Lógica para ler o PDF e extrair dados
+ ┃ ┣ 📂 views
+ ┃ ┃ ┣ 📜 csv_writer.py                # Responsável por gerar o CSV a partir dos dados
+ ┃ ┣ 📜 main.py                        # Ponto de entrada da aplicação
+ ┣ 📂 tests
+ ┃ ┣ 📜 test_pdf_service.py            # Testes para a extração de dados
+ ┃ ┣ 📜 test_csv_writer.py             # Testes para geração do CSV
+ ┣ 📜 Dockerfile
+ ┣ 📜 requirements.txt
+ ┣ 📜 README.md
+```
+
+## 🌿 Estrutura de Branches
+
+Este repositório conterá diferentes projetos, organizados por branches:
+
+- `webscraping` → Web Scraper ANS
+- `api` → API
+- `database` → Database Query
+- `data-transformation` → Data Transformation
+- `documentation` → Documentation
+
+Para alternar entre os projetos:
+
+```sh
+git checkout data-base
+```
+
+## 🔍 Testes Unitários
+
+Os testes são fundamentais para garantir a integridade do código. Os principais arquivos de testes são:
+
+- **`test_pdf_service.py`** → Contém os testes unitários principais para validar a extração de dados do PDF.
+- **`test_csv_writer.py`** → Testes para garantir que a geração do CSV ocorra corretamente.
+
+
+Para rodar os testes, utilize:
+
+```sh
+pytest
+```
 
 ## 📜 Licença
-Este projeto é licenciado sob a [MIT License](./LICENSE).
 
-## 🚀 Como Acessar o Código
-Cada parte do projeto pode ser acessada através dos links acima. Basta navegar até a branch desejada para visualizar o código correspondente.
-
----
-Caso tenha dúvidas ou precise de mais informações, sinta-se à vontade para entrar em contato!
-
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
