@@ -1,4 +1,0 @@
-pdfplumber==0.6.0        # Para extrair conteúdo de PDFs
-pandas==1.5.3            # Para manipulação e criação do CSV
-openpyxl==3.0.10         # Caso precise lidar com Excel (opcional)
-pytest==7.2.0            # Para testes automatizados
