@@ -63,16 +63,24 @@ docker-compose up --build
  ┣ 📂 src
  ┃ ┣ 📂 controllers
  ┃ ┃ ┣ 📜 transformation_controller.py  # Coordena o fluxo de transformação
+ ┃ ┣ 📂 exceptions
+ ┃ ┃ ┣ 📜 pdf_excceptions.py
+ ┃ ┃ ┣ 📜 csv_exceptions.py
+ ┃ ┃ ┣ 📜 transformation_exceptions.py
  ┃ ┣ 📂 models
  ┃ ┃ ┣ 📜 pdf_data.py                  # Representa os dados extraídos do PDF
  ┃ ┣ 📂 services
  ┃ ┃ ┣ 📜 pdf_service.py               # Lógica para ler o PDF e extrair dados
+ ┃ ┣ 📂 utils
+ ┃ ┃ ┣ 📜 get_project_root.py
  ┃ ┣ 📂 views
  ┃ ┃ ┣ 📜 csv_writer.py                # Responsável por gerar o CSV a partir dos dados
  ┃ ┣ 📜 main.py                        # Ponto de entrada da aplicação
  ┣ 📂 tests
  ┃ ┣ 📜 test_pdf_service.py            # Testes para a extração de dados
  ┃ ┣ 📜 test_csv_writer.py             # Testes para geração do CSV
+ ┃ ┣ 📜 test_transformation_controller.py # Testes para transformação dos arquivos
+ ┃ ┣ 📜 test_performance.py # Testes de perfomance
  ┣ 📜 Dockerfile
  ┣ 📜 requirements.txt
  ┣ 📜 README.md
@@ -100,12 +108,14 @@ Os testes são fundamentais para garantir a integridade do código. Os principai
 
 - **`test_pdf_service.py`** → Contém os testes unitários principais para validar a extração de dados do PDF.
 - **`test_csv_writer.py`** → Testes para garantir que a geração do CSV ocorra corretamente.
+- **`test_transformation_controller.py`** → Testes para garantir a transformação do PDF ocorra corretamente.
+- **`test_performance.py`** → Testes para avaliar performance total da aplicação.
 
 
 Para rodar os testes, utilize:
 
 ```sh
-pytest
+pytest tests/ -v
 ```
 
 ## 📜 Licença
