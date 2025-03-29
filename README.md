@@ -106,10 +106,10 @@ git checkout data-base
 
 Os testes são fundamentais para garantir a integridade do código. Os principais arquivos de testes são:
 
-- **`test_pdf_service.py`** → Contém os testes unitários principais para validar a extração de dados do PDF.
-- **`test_csv_writer.py`** → Testes para garantir que a geração do CSV ocorra corretamente.
-- **`test_transformation_controller.py`** → Testes para garantir a transformação do PDF ocorra corretamente.
-- **`test_performance.py`** → Testes para avaliar performance total da aplicação.
+- **`test_pdf_service.py`** →  Contém os testes unitários principais para validar a extração de dados do PDF.
+- **`test_csv_writer.py`** →  Testes para garantir que a geração do CSV ocorra corretamente.
+- **`test_transformation_controller.py`** →  Testes para garantir a transformação do PDF ocorra corretamente.
+- **`test_performance.py`** →  Testes para avaliar performance total da aplicação.
 
 
 Para rodar os testes, utilize:
