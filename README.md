@@ -55,6 +55,10 @@ psql -U seu_usuario -d seu_banco -f create_tables.sql
 
 ### 2️⃣ Importação dos Dados
 
+#### Descompactar Arquivos zip
+
+Deixe todos os arquivos csv em `'./data'`
+
 #### Importação dos Dados Cadastrais
 
 Utilize o comando `\i ./sql/importar_operadoras.sql` no CLI do PostgreSQL para importar os dados para a tabela `operadoras`.
@@ -82,17 +86,13 @@ Utilize o comando `\i ./sql/analitics_queries.sql`
  ┃ ┣ 📜 create_tables.sql         # Script para criação das tabelas (operadoras e demonstracoes_contabeis)
  ┃ ┣ 📜 import_operadoras.sql     # Script com o comando \copy para importação dos dados das operadoras
  ┃ ┣ 📜 import_finance_data.sql   # Script para importação dos dados financeiros (tabela de staging e inserção)
- ┃ ┣ 📜 analitics_queries.sql    # Script com as queries analíticas (último trimestre, último ano, etc.)
+ ┃ ┣ 📜 analitics_queries.sql     # Script com as queries analíticas (último trimestre, último ano, etc.)
  ┣ 📂 data
  ┃ ┣ 📜 Relatorio_cadop.csv       # Arquivo CSV com os dados cadastrais das operadoras
- ┃ ┣ 📜 1T2023.csv                # Arquivo CSV com dados financeiros do 1º trimestre de 2023
- ┃ ┣ 📜 2t2023.csv                # Arquivo CSV com dados financeiros do 2º trimestre de 2023
- ┃ ┣ 📜 3T2023.csv                # Arquivo CSV com dados financeiros do 3º trimestre de 2023
- ┃ ┣ 📜 4T2023.csv                # Arquivo CSV com dados financeiros do 4º trimestre de 2023
- ┃ ┣ 📜 1T2024.csv                # Arquivo CSV com dados financeiros do 1º trimestre de 2024
- ┃ ┣ 📜 2T2024.csv                # Arquivo CSV com dados financeiros do 2º trimestre de 2024
- ┃ ┣ 📜 3T2024.csv                # Arquivo CSV com dados financeiros do 3º trimestre de 2024
- ┃ ┣ 📜 4T2024.csv                # Arquivo CSV com dados financeiros do 4º trimestre de 2024
+ ┃ ┣ 📜 finance_data_2023_1.zip   # Contém arquivos CSV com dados financeiros do 1º e 2º trimestre de 2023
+ ┃ ┣ 📜 finance_data_2023_2.zip   # Contém arquivos CSV com dados financeiros do 3º e 4º trimestre de 2023
+ ┃ ┣ 📜 finance_data_2024_1.zip   # Contém arquivos CSV com dados financeiros do 1º e 2º trimestre de 2024
+ ┃ ┣ 📜 finance_data_2024_1.zip   # Contém arquivos CSV com dados financeiros do 3º e 4º trimestre de 2024
  ┣ 📜 README.md                   # Este arquivo
 ```
 ---
