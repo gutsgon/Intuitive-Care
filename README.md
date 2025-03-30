@@ -15,7 +15,7 @@ Este projeto realiza a transformação de dados extraídos de arquivos PDF para 
 - **[PyCharm](https://www.jetbrains.com/pycharm/)** (IDE recomendada para desenvolvimento em Python)
 - **[Docker](https://www.docker.com/)** (opcional, para containerizar a aplicação)
 - **[Pandas](https://pandas.pydata.org/)** (para manipulação de dados)
-- **[PyMuPDF]((https://pymupdf.readthedocs.io/en/latest/installation.html))** (para extração de texto de PDFs)
+- **[PyMuPDF](https://pymupdf.readthedocs.io/en/latest/installation.html)** (para extração de texto de PDFs)
 - **[Pytest](https://pytest.org/)** (para testes automatizados)
 - **[Psutil](https://github.com/giampaolo/psutil/blob/master/INSTALL.rst)** (para testes de performance)
 
