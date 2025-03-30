@@ -95,6 +95,21 @@ Utilize o comando `\i ./sql/analitics_queries.sql`
  ┃ ┣ 📜 finance_data_2024_1.zip   # Contém arquivos CSV com dados financeiros do 3º e 4º trimestre de 2024
  ┣ 📜 README.md                   # Este arquivo
 ```
+## 🌿 Estrutura de Branches
+
+Este repositório conterá diferentes projetos, organizados por branches:
+
+- `webscraping` → Web Scraper ANS
+- `api` → API
+- `database` → Database Query
+- `data-transformation` → Data Transformation
+- `documentation` → Documentation
+
+Para alternar entre os projetos:
+
+```sh
+git checkout api
+```
 ---
 
 ## 📜 Licença
