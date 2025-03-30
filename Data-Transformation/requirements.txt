@@ -1,10 +1,5 @@
-pdfplumber       # Para extrair conteúdo de PDFs
+fitz       # Para extrair conteúdo de PDFs
 pandas            # Para manipulação e criação do CSV
 openpyxl        # Caso precise lidar com Excel (opcional)
 pytest          # Para testes automatizados
-csv		# Manipulação de CSV
-zipfile		# Compactar arquivos
-os 		# Manipular diretórios do sistema
-pathlib 	# Manipular diretórios
-re		# Manipulação de Strings
 psutil		# Para testes de performance
