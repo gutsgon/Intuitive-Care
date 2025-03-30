@@ -63,28 +63,29 @@ docker-compose up --build
 📦 Data Transformation
  ┣ 📂 src
  ┃ ┣ 📂 controllers
- ┃ ┃ ┣ 📜 transformation_controller.py  # Coordena o fluxo de transformação
+ ┃ ┃ ┣ 📜 transformation_controller.py    # Coordena o fluxo de transformação
  ┃ ┣ 📂 exceptions                 
- ┃ ┃ ┣ 📜 pdf_exceptions.py            # Exceções do PDF
- ┃ ┃ ┣ 📜 csv_exceptions.py            # Exceções do CSV
- ┃ ┃ ┣ 📜 transformation_exceptions.py # Exceções de PDF → CSV
+ ┃ ┃ ┣ 📜 pdf_exceptions.py               # Exceções do PDF
+ ┃ ┃ ┣ 📜 csv_exceptions.py               # Exceções do CSV
+ ┃ ┃ ┣ 📜 transformation_exceptions.py    # Exceções de PDF → CSV
  ┃ ┣ 📂 models
- ┃ ┃ ┣ 📜 pdf_data.py                  # Representa os dados extraídos do PDF
+ ┃ ┃ ┣ 📜 pdf_data.py                     # Representa os dados extraídos do PDF
  ┃ ┣ 📂 services
- ┃ ┃ ┣ 📜 pdf_service.py               # Lógica para ler o PDF e extrair dados
+ ┃ ┃ ┣ 📜 pdf_service.py                  # Lógica para ler o PDF e extrair dados
  ┃ ┣ 📂 utils                          
- ┃ ┃ ┣ 📜 get_project_root.py          # Extrair diretório root
+ ┃ ┃ ┣ 📜 get_project_root.py             # Extrair diretório root
  ┃ ┣ 📂 views
- ┃ ┃ ┣ 📜 csv_writer.py                # Responsável por gerar o CSV a partir dos dados
- ┃ ┣ 📜 main.py                        # Ponto de entrada da aplicação
+ ┃ ┃ ┣ 📜 csv_writer.py                   # Responsável por gerar o CSV a partir dos dados
+ ┃ ┣ 📜 main.py                           # Ponto de entrada da aplicação
  ┣ 📂 tests
- ┃ ┣ 📜 test_pdf_service.py            # Testes para a extração de dados
- ┃ ┣ 📜 test_csv_writer.py             # Testes para geração do CSV
+ ┃ ┣ 📜 test_pdf_service.py               # Testes para a extração de dados
+ ┃ ┣ 📜 test_csv_writer.py                # Testes para geração do CSV
  ┃ ┣ 📜 test_transformation_controller.py # Testes para transformação dos arquivos
- ┃ ┣ 📜 test_performance.py # Testes de perfomance
- ┣ 📜 Dockerfile
- ┣ 📜 requirements.txt
- ┣ 📜 README.md
+ ┃ ┣ 📜 test_performance.py               # Testes de perfomance
+ ┣ 📜 Dockerfile                          # Configurações do Docker
+ ┣ 📜 docker-compose.yml                  # Configurações do Docker
+ ┣ 📜 requirements.txt                    # Dependências do projeto
+ ┣ 📜 README.md                           # Instruções do projeto
 ```
 
 ## 🌿 Estrutura de Branches
