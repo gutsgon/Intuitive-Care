@@ -64,16 +64,16 @@ docker-compose up --build
  ┣ 📂 src
  ┃ ┣ 📂 controllers
  ┃ ┃ ┣ 📜 transformation_controller.py  # Coordena o fluxo de transformação
- ┃ ┣ 📂 exceptions
- ┃ ┃ ┣ 📜 pdf_excceptions.py
- ┃ ┃ ┣ 📜 csv_exceptions.py
- ┃ ┃ ┣ 📜 transformation_exceptions.py
+ ┃ ┣ 📂 exceptions                 
+ ┃ ┃ ┣ 📜 pdf_exceptions.py            # Exceções do PDF
+ ┃ ┃ ┣ 📜 csv_exceptions.py            # Exceções do CSV
+ ┃ ┃ ┣ 📜 transformation_exceptions.py # Exceções de PDF → CSV
  ┃ ┣ 📂 models
  ┃ ┃ ┣ 📜 pdf_data.py                  # Representa os dados extraídos do PDF
  ┃ ┣ 📂 services
  ┃ ┃ ┣ 📜 pdf_service.py               # Lógica para ler o PDF e extrair dados
- ┃ ┣ 📂 utils
- ┃ ┃ ┣ 📜 get_project_root.py
+ ┃ ┣ 📂 utils                          
+ ┃ ┃ ┣ 📜 get_project_root.py          # Extrair diretório root
  ┃ ┣ 📂 views
  ┃ ┃ ┣ 📜 csv_writer.py                # Responsável por gerar o CSV a partir dos dados
  ┃ ┣ 📜 main.py                        # Ponto de entrada da aplicação
