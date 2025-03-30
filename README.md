@@ -24,7 +24,7 @@ Este projeto realiza a transformação de dados extraídos de arquivos PDF para 
 Antes de começar, verifique se você tem instalado:
 
 - [Python 3.x](https://www.python.org/)
-- **pip** (gerenciador de pacotes do Python)
+- **[pip](https://pip.pypa.io/en/stable/installation/)** (gerenciador de pacotes do Python)
 
 Recomendação de ferramenta de desenvolvimento:
 
