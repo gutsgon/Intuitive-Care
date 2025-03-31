@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+SQLAlchemy
+pandas
+python-dotenv
+pytest
