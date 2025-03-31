@@ -104,6 +104,7 @@ docker-compose up --build
 📦 API
  ┣ 📂 app
  ┃ ┣ 📂 controllers           # Lógica de rotas e chamadas aos serviços
+ ┃ ┃ ┣ 📜 operadora_controller.py
  ┃ ┣ 📂 database              # Conexão e inicialização do banco de dados
  ┃ ┃ ┣ 📜 connection.py
  ┃ ┣ 📂 exceptions            # Exceções personalizadas da aplicação
